@@ -6,11 +6,15 @@ const typeDefs = `
         test: String
         greet(name: String): String
         forceGreet(name: String!): String
-        movies: [Movie]
+        movies: [Movie],
+        users: [User]
     }
 
     type Mutation {
         createMovie(movie: MovieMutation!): Movie
+        createUser(user: UserInput): User
+        deleteUser(_id: ID): User
+        updateUser(_id: ID, input: UserInput): User
     }
 
     type Movie {
@@ -19,9 +23,22 @@ const typeDefs = `
         year: Int
     }
 
+    type User {
+        _id: ID
+        firstName: String!
+        lastName: String
+        age: Int
+    }
+
     input MovieMutation {
         name: String!
         year: Int
+    }
+
+    input UserInput {
+        firstName: String!
+        lastName: String
+        age: Int
     }
 `;
 

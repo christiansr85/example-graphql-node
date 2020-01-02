@@ -2,11 +2,19 @@ import express from 'express';
 import GraphqlHTTP from 'express-graphql';
 import schema from './schema';
 
+import { connect } from './database';
+
 const app = express();
+
+// Connects to database
+connect();
 
 app.use('/graphql', GraphqlHTTP({
     graphiql: true,
-    schema: schema
+    schema: schema,
+    context: {
+        test: 'test'
+    }
 }));
 
 // Default endpoint for root url

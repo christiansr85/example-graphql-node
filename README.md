@@ -49,5 +49,22 @@ $ mongo
 ```
 (This is to run the `mongodb` console inside the bash in order to be able to perform the mongo queries)
 
+## Launch server
+Just execute these commands in a terminal:
+```
+$ npm install
+$ npm run start:debug
+```
+
+This will start the server through `nodemon`, so it will be listening for any change in the code in order to restart the server.
+
+You can build a distributable transpilation of the code thanks to babel:
+```
+$ npm run build
+```
+
+## Access to the application
+As I have hardcoded the port to `3000`, you can get access to the tests through <http://localhost:3000/graphql>.
+
 ## Credits
 Based on the [tutorial of `Fazt`](https://www.youtube.com/watch?v=Wl8O6wW4FJU&list=WL&index=2&t=521s)

@@ -48,3 +48,6 @@ $ docker exec -it mongodbtest bash
 $ mongo
 ```
 (This is to run the `mongodb` console inside the bash in order to be able to perform the mongo queries)
+
+## Credits
+Based on the [tutorial of `Fazt`](https://www.youtube.com/watch?v=Wl8O6wW4FJU&list=WL&index=2&t=521s)

@@ -1,0 +1,33 @@
+{
+  "name": "example-graphql-node",
+  "version": "1.0.0",
+  "description": "POC for a test server developed in nodejs and a mongodb database (running in a docker container)",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "start:debug": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d dist --source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christiansr85/example-graphql-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christiansr85/example-graphql-node/issues"
+  },
+  "homepage": "https://github.com/christiansr85/example-graphql-node#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "nodemon": "^2.0.2"
+  }
+}
